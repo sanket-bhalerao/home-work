@@ -8,9 +8,8 @@ describe('HeroesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroesComponent ]
-    })
-    .compileComponents();
+      declarations: [HeroesComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +20,10 @@ describe('HeroesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it(`should have unordered list`, () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('ul').textContent).toContain('Narco ');
   });
 });
