@@ -12,9 +12,6 @@ addons:
     packages:
       - google-chrome-stable
 
-before_script:
-  - rm -rf ./node_modules package-lock.json
-
 install:
   - npm install
 
