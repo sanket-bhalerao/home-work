@@ -4,8 +4,6 @@ sudo: false
 language: node_js
 node_js:
   - "node"
-cache:
-  npm: false
 
 addons:
   apt:
@@ -14,9 +12,8 @@ addons:
     packages:
       - google-chrome-stable
 
-cache:
-  directories:
-    - ./node_modules
+before_script:
+  - rm -rf ./node_modules package-lock.json
 
 install:
   - npm install
